@@ -1,0 +1,131 @@
+msg_nany_dicionario=(
+"\033[37mOi ${USER}, bem eu não sou uma mulher kkkkk, mas fui criada para agir como uma, ou o mais proximo pocivel kkkk.
+Então, para falar comigo voçe deve usar as palavra corretas, caso contrario eu vou ignorar oque voçe disse ok?
+Vamos começar.\033[m
+
+            COMANDOS                                                                     DESCRIÇÃO
+
+\033[4;32m'palavras magicas' 'magicas' 'correto'				\033[mUse essas palavras para vir até esta pagina
+
+\033[4;32m'comandos mais basicos' 'comandos basicos'			\033[mTe mostrarei os comandos basicos do terminal linux
+
+\033[4;32m'comandos de data''comandos de hora'				\033[mVoçe vera alguns dos comandos para manipular a data e a hora
+
+\033[4;32m'comandos multimidia''comandos para musicas'			\033[mEsses comando reproduzem arquivos multimida Alguns podem não estar instalados no seu sistema
+
+\033[4;32m'comandos grep''comando grep'					\033[mAprenda um pouco sobre o comando grep
+
+\033[4;32m'comandos sed''comando sed'					\033[mAlgumas das formas de usar o comando sed
+
+\033[4;32m'comandos awk''comando awk'					\033[mTe mostrara algumas funções do comando awk
+
+\033[4;32m'comandos de busca''comando de busca'				\033[mTe mostra alguns comandos usados para buscar em ou dentro de arquivos
+
+\033[4;32m'comandos mais comuns''comandos mais simples'			\033[mAqui estao os comando mais usados no dia a dia
+
+\033[4;32m'comandos do sistema''comandos para visualizar'			\033[mEsses comandos irao te mostrar processos que estao correndo no sistema
+
+\033[4;32m'para desligar''para reiniciar'					\033[mTe mostra os comandos mais usados para desligar ou reiniciar sua maquina
+
+\033[4;32m'adicionar um usuario''adicionar usuario''deletar usuario'	\033[mAprenda o basico para adicionar ou deletar usuarios ao sistema.Esses comandos podem mudar de uma distro para outra
+
+\033[4;32m'permitir execucao''dar permissao'				\033[mEsses são os comandos mais usados para dar permissões de leitua e escrita a arquivos
+
+\033[4;32m'visualizar processos''matar processos''finalizar um processo'	\033[mCom esses comandos voçe visualiza, mata oou finaliza um processo.Uses esses comandos com cuidado
+
+\033[4;32m'comandos de rede''download pelo terminal'			\033[mEsses comandos te mostram como manipular sua rede e alguns utilitaris de rede
+
+\033[4;32m'compactar''descompactar'					\033[mAprenda algumas formas de como compactar e descompactar arquivos
+
+\033[4;32m'montar um dispositivo''desmontar um dispositivo'		\033[mCom estes comandos voçe pode montar e desmontar dispositivos
+
+\033[4;32m'todo o sistema''minha maquina'					\033[mCom estas palavras voçe ira visualizar, todo seu sistema,como sua placa mãe,processador, 
+								\033[mmemoria etc..\033[31mDepende de inxi
+
+\033[4;32m'delete''exclua''apague'					\033[mUse quando quiser deletar um pacote Não deleta dependencias
+
+\033[4;32m'clima''chover'							\033[mEsse comando ira te mostrar o clima em sua cidade ou o mais proximo dela.\033[31mDepende de curl
+
+\033[4;32m'instale'							\033[mUsado para instalar um programa
+
+\033[4;32m'informe sobre um''informacao de um''informar sobre um'		\033[mUse para obter informações sobre um pacote
+
+\033[4;32m'encontre''busque''pesquise''pesquisar'				\033[mUse para encontra pacotes nos repositorios
+
+\033[4;32m'horas''horas''hora''hora'					\033[mExibe a hora do sistema
+
+\033[4;32m'sair''tchaw''ate logo''ate logo''vou nessa''vou nessa'		\033[mUse para finalizar o programa ou \033[31mCtrl + c
+
+\033[4;32m'memoria total''total de memoria''memoria eu tenho'		\033[mTe mostra a capacidade de memoria total do seu sistema
+
+\033[4;32m'memoria livre''livre de memoria'				\033[mMostra a quantidade de memoria livre voçe possue
+
+\033[4;32m'consumo de memoria''memoria usada'
+\033[4;32m'usando de memoria''memoria em uso'				\033[mMostra a memoria sendo usado por seu sistema
+\033[4;32m'memoria esta usando''sendo usado de memoria'
+\033[4;32m'sendo usada
+
+\033[4;32m'espaco em disco''espaco que tenho''total do meu disco'		\033[mTe mostrara o total de armazenamento de seu HD ou SSD
+
+\033[4;32m'sendo usado''usando do meu disco'                        	\033[mPara saber qunto de disco esta sendo usado
+
+\033[4;32m'icones''icones legais''encontrar icones''temas de icones	\033[mTe mostrara alguns sites onde voce encontra temas de icones
+
+\033[4;32m'temas gtk'							\033[mSites contendo varios temas GTK
+
+\033[4;32m'papeis de parede''planos de fundo''wallpapers'			\033[mTe mostra onde encontrar alguns Wallpapers
+
+\033[4;32m'bom dia'							\033[mExibe uma menssagem de bom dia
+
+\033[4;32m'boa tarde'							\033[mExibe uma menssagem de boa tarde
+
+\033[4;32m'boa noite'							\033[mExibe uma menssagem de boa noite
+
+\033[4;32m'quantos''quantos'						\033[mMostra a quantidade de pacotes estão instalados no sistema
+
+\033[4;32m'k'								\033[mPode ser usado em sequencia Não tem função util
+
+\033[4;32m'oi'								\033[mSomente retorna um oi Sem função util
+
+\033[4;32m'obrigado''valeu'						\033[mUse apenas para agradecer Sem função util
+
+\033[4;32m'atualizar''atualizacao''atualizacoes'				\033[mBusca por atualizações, sincroniza os repositorios 
+								\033[me mostra quais são os pacotes a serem atualizados
+
+\033[4;32m'atualize'							\033[mFaz a atualização do sistema
+
+\033[4;32m'em cache?''o cache?'						\033[mMostra os pacotes que estão em cache
+
+\033[4;32m'limpe a tela''limpar tela'					\033[mLimpa a tela											
+
+\033[4;32m'que bom''muito bom'						\033[mExibe uma menssagem de retorno Sem função utiu
+
+\033[4;32m'fazendo'							\033[mExibe uma menssagem de retorno Sem função util
+
+\033[4;32m'dia''dia e hoje'						\033[mExibe a data do sistema
+
+\033[4;32m'como voce esta?''tudo bem?'					\033[mRetorna uma menssagem de dialogo padrão Sem função util
+
+\033[4;32m'bem'								\033[mRetorna uma menssagem de dialogo padrão Sem função util 
+
+\033[4;32m'nao sei'							\033[mRetorna uma menssagem de dialogo padrão Sem função util
+
+\033[4;32m'nany'								\033[mUse para chamar o programa
+
+\033[4;32m'legal''nossa''massa'						\033[mRetorna uma menssagem de dialogo padrão Sem função util 
+
+\033[4;32m'faz''fazer''capaz''oque mais?''mais oque?			\033[mMostra de forma aleatoria as capacidades do programa'	
+
+\033[4;32m'calendario do ano''calendario todo				\033[mMostra o calendario completo do ano vigente
+
+\033[4;32m'calendario'							\033[mExibe o calendario do mes
+
+\033[4;32m'orfaos'orfao'							\033[mMostra se existem dependencias que ja nao sao usadas por outros pacotes
+
+\033[4;32m'comandos do debian''usar o apt''o apt-get'			\033[mMostra sites e canais de video, que ajudam com comandos internos do debian
+
+\033[4;32m'comandos do arch''usar o pacman'				\033[mMostra sites e canais de video, que ajudam com comandos internos do arch-linux
+
+\033[4;32m'oque e linux''o linux'						\033[mTe mostra sites onde pesquisar sobre o linux")
+
+

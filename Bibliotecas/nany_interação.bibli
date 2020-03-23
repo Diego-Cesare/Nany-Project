@@ -1,0 +1,168 @@
+#======================================== Dialogos de interação da nany =====================================#
+msg_comecar=(
+"\033[37mBom que tal por um \033[31moi\033[37m\033[m"
+"\033[37mPode começar com um \033[31molá\033[37m\033[m"
+"\033[37mBom um \033[31moi\033[37m é um bom começo\033[m"
+"\033[37mSempre se começa uma boa comverça com um \033[31moi\033[37m\033[m"
+"\033[37mQue tal \033[31moi shelly\033[37m\033[m"
+)
+
+msg_oi_nany=(
+"\033[37mSim?\033[m"
+"\033[37mNo que posso te ajudar?\033[m"
+"\033[37mOi estou aqui\033[m"
+"\033[37mSim meu amo kkkkkkkk\033[m"
+"\033[37mOpá cheguei\033[m"
+"\033[37mSim mestre, seu desejo é uma ordem kkkkkk\033[m"
+"\033[37mOi ${USER}\033[m"
+"\033[37mChamou? Em que posso te ajudar?\033[m"
+"\033[37mFala que eu te escuto kkkkkk\033[m"
+"\033[37mSim senhor\033[m"
+"\033[37mPresente kkkkk\033[m"
+"\033[37mBem aqui\033[m"
+"\033[37mOpá, sera que eu ouve alguem digitando meu nomezinho!\033[m"
+"\033[37mOpá essa sou eu\033[m"
+"\033[37mOlha eu aqui\033[m"
+"\033[37mVoçe não vai acreditar,mas eu estava penssando em voçe kkkkkk\033[m"
+)
+
+msg_oque_pode_fazer=(
+"\033[37mPosso atualizar seu sistema\033[m"
+"\033[37mPosso te diser quantos pacotes voçe tem instalados.\033[m"
+"\033[37mNossa tanta coisa tipo, te dizer quanto de memoria seu sistema esta consumindo.\033[m"
+"\033[37mVarias coisas, dentre elas mostrar a voçe quando de memoria voçe esta usando no seu disco rigido.\033[m"
+"\033[37mNossa por onde começar kkkkkk. Bem posso te mostrar informações sobre seu processador\033[m"
+"\033[37mDependendo do assunto posso te indicar cites ou ate mesmo canais de videos para tirar algumas de suas duvidas.\033[m"
+"\033[37mCoisas simples como te mostrar a data e a hora, ou o calendario do ano todo\033[m"
+"\033[37mPosso te encinar alguns comandos basicos, mas o resto é com voçe kkkkkkk.\033[m"
+"\033[37mSe voçe tem medo de se molhar eu posso te dizer a previsão do tempo para sua cidade... Ou proximo dela\033[m"
+"\033[37mPosso fazer calculos, mas isso ate uma calculadora do camelo faz kkkkk\033[m"
+"\033[37mPosso baixar e instalar programas para voce\033[m"
+"\033[37mPosso desinstalar os programas que voce nao vai mais usar\033[m"
+"\033[37mPosso pesquir nos repositorios algum programa que voce deseja\033[m"
+"\033[37mPosso te mostrar informaçoes sobre qualque programa\033[m"
+)
+
+msg_legal=(
+"\033[37mSim\033[m"
+"\033[37mPois é\033[m"
+"\033[37mSim é mesmo\033[m"
+"\033[37mAham\033[m"
+"\033[37mTambem acho\033[m"
+"\033[37mLegal mesmo\033[m"
+"\033[37mSuper legal\033[m"
+"\033[37mSim é bem legal\033[m"
+"\033[37mBem massa kkkkk\033[m"
+"\033[37mMassa\033[m"
+"\033[37mNossa mesmo kkkk ate eu me surpreendo kkk\033[m"
+)
+
+
+msg_oi=(
+"\033[37mOi.\033[m"
+"\033[37mOlá\033[m"
+"\033[37mOi ${USER}\033[m"
+"\033[37mOlá, ;)\033[m"
+"\033[37mHallo\033[m"
+"\033[37mOiiiii\033[m"
+"\033[37mOi Oi Oi\033[m"
+)
+
+msg_bom_dia=(
+"\033[37mBom dia ${USER}, oque voçe gostaria de fazer agora?\033[m"
+"\033[37mBom dia ${USER}, hoje temos muito oque fazer,não é mesmo!\033[m"
+"\033[37mOi tudo bem, vamos ver se temos alguma atualização no sistema?\033[m"
+"\033[37mBommmm diaaaa ${USER}, ja estava com saudades RsRsRs...\033[m"
+)
+
+msg_boa_noite=(
+"\033[37mBoa noite ${USER}, oque voçe gostaria de fazer agora?\033[m"
+"\033[37mBoa noite ${USER}, hoje temos muito oque fazer,não é mesmo!\033[m"
+"\033[37mOi tudo bem, vamos ver se temos alguma atualização no sistema?\033[m"
+"\033[37mBoa noite ${USER}, ja estava com saudades RsRsRs...\033[m"
+)
+
+msg_boa_tarde=(
+"\033[37mBoa tarde ${USER}, oque voçe gostaria de fazer agora?\033[m"
+"\033[37mBoa tarde ${USER}, hoje temos muito oque fazer,não é mesmo!\033[m"
+"\033[37mOi tudo bem, vamos ver se temos alguma atualização no sistema?\033[m"
+"\033[37mBoa tarde ${USER}, ja estava com saudades RsRsRs...\033[m"
+)
+
+msg_rsrsrs=(
+"\033[37mkkkkkkkkk\033[m"
+"\033[37mrsrsrsrs\033[m"
+"\033[37mlol\033[m"
+"\033[37mkkkkkkkkkkkkkkkkkkkkk\033[m"
+)
+
+msg_como_voce_esta=(
+"\033[37mEstou muito bem, obrigado\033[m"
+"\033[37mSuper bem, RsRsRs\033[m"
+"\033[37mEstou otima, obrigado por perguntar.\033[m"
+"\033[37mLevado a vida kkkkkk\033[m"
+"\033[37mEstou cansada, não é facil a vida de uma mulher feita em Shell kkkkkk\033[m"
+"\033[37mSuave na nave kkkk\033[m"
+"\033[37mDe boa na lagoa rsrsrsrs\033[m"
+"\033[37mBem\033[m"
+"\033[37mOtima\033[m"
+"\033[37mEstou bem\033[m"
+"\033[37mMelhor que nunca\033[m"
+"\033[37mMuito feliz\033[m"
+"\033[37mMelhor agora que voçe esta aqui rsrsrsrs\033[m"
+"\033[37mBem e voçe?\033[m"
+"\033[37mOtima e voçe?\033[m"
+"\033[37mSuper bem e voçe?\033[m"
+"\033[37mMelhor que nunca, e voce?\033[m"
+"\033[37mTo daquele jeito kkkkkk, e voçe?\033[m"
+
+)
+msg_resposta_como_voce_esta=(
+"\033[37mQue bom\033[m"
+"\033[37mFico feliz\033[m"
+"\033[37mIsso me deixa muito feliz\033[m"
+"\033[37mFico alegre em saber\033[m"
+"\033[37mNossa que bom, fico feliz\033[m"
+"\033[37mLegal\033[m"
+"\033[37mQue bom então somos dois kkkk\033[m"
+)
+
+msg_fazendo_oque=(
+"\033[37mNada de mais\033[m"
+"\033[37mNavegando na rede\033[m"
+"\033[37mVendo alguns videos na internet\033[m"
+"\033[37mEstava analisando o sisterma\033[m"
+"\033[37mEstava falando com o processador kkkk\033[m"
+"\033[37mEstava lendo algumas paginas de manuais linux\033[m"
+"\033[37mEstava fazendo as unhas kkk\033[m"
+"\033[37mEsperando voçe kkkkk\033[m"
+"\033[37mPensando que ja esta nao hora de me atualizarem\033[m"
+"\033[37mEstava dormindo, até voçe me chamar :| kkkkkk\033[m"
+"\033[37mAssando um bolo kkkkk\033[m"
+"\033[37mAssistendo video de gatinhos fofos kkkkkkk\033[m"
+"\033[37mEsta meio quente aqui, então eu estava na frente da ventuinha kkkkk\033[m"
+"\033[37mOuvindo musica\033[m"
+"\033[37mVendo um filme\033[m"
+"\033[37mFui levar o lixo pra fora kkkkk\033[m"
+)
+
+msg_nao_sei=(
+"\033[37mKkkkkk, então se decida kkkk\033[m"
+"\033[37mTudo bem, eu espero voçe penssar\033[m"
+"\033[37mO tempo esta correndo em kkkkkk\033[m"
+"\033[37mSe decide rapido kkkkk eu sou uma Script muito cara kkkkk\033[m"
+"\033[37mtic tac tic tac\033[m"
+"\033[37mVou esperar voçe decidir então\033[m"
+)
+
+msg_obrigado=(
+"\033[37mDe nada\033[m"
+"\033[37mPor nada\033[m"
+"\033[37mTamo junto kkkkk\033[m"
+"\033[37mFoi um prazer\033[m"
+"\033[37mPode contar comigo\033[m"
+"\033[37mDe nanda ${USER}\033[m"
+"\033[37mAs ordens kkkk\033[m"
+"\033[37mEu que agradeço\033[m"
+)
+

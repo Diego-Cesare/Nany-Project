@@ -1,0 +1,293 @@
+msg_comandos_basicos=(
+"COMANDOS BÁSICOS
+
+Comandos					Descrição
+
+\033[1;33m<TAB>\033[m					Completa nomes e comandos no shell.
+\033[1;33m<Ctrl>+<C>\033[m				Interrompe a execução de um comando.
+\033[1;33m<Ctrl>+<Z>\033[m				Pausa a execução de um comando. Para retornar use fg n, 
+			\033[m		sendo n um número exibido entre colchetes [ ], exemplo: fg 1.
+\033[1;33mhistory	\033[m				Exibe o histórico de comandos digitados.
+\033[1;33mhistory -cw	\033[m			Limpa o histórico do shell.
+\033[1;33m↑ ou ↓	\033[m				As teclas direcionais para cima ou para baixo exibem os comandos digitados 
+			\033[m		que estão armazenados no histórico.
+\033[1;33m|				\033[m	Pipe, filtra a saída do terminal. Útil para combinar diversos comandos.
+\033[1;33mecho "Livro Shell" > arquivo	\033[m	Salva o conteúdo de “Livro Shell” no “arquivo”.
+\033[1;33mecho "Livro Shell" >> arquivo	\033[m	Salva o conteúdo de “Livro Shell” no final do “arquivo”. 
+					\033[mNão apaga o conteúdo pre existente, apenas adiciona ao final.
+\033[1;33mnome="Tales" ; echo $nome	\033[m		“nome” recebe o valor de “Tales” e exibe o valor da variável.
+\033[1;33mvi				\033[m	Editor de textos.
+\033[1;33mnano				\033[m	Editor de textos.
+\033[1;33mmd5sum			\033[m		Checa a integridade de um arquivo.")
+ 
+msg_comandos_manipulacao=(
+"MANIPULANDO ARQUIVOS E DIRETÓRIOS
+
+Comandos					Descrição
+
+\033[1;33mcd ..	                        \033[m        Sobe um nível na árvore de diretórios.
+\033[1;33mls	                         \033[m       Lista arquivos e diretórios.
+\033[1;33mls -lh	                 \033[m               Lista arquivos e diretórios com mais detalhes.
+\033[1;33mls -a	                           \033[m     Lista arquivos e diretórios, inclusive ocultos.
+\033[1;33mls -d */	                   \033[m     Lista apenas diretórios.
+\033[1;33mmkdir	                           \033[m     Cria um diretório.
+\033[1;33mmkdir -p	                   \033[m     Cria vários diretórios simultâneos.
+\033[1;33mrm	                           \033[m     Remove um arquivo.
+\033[1;33mrm -r				\033[m	Remove um diretório.
+\033[1;33mcp				\033[m	Copia um arquivo.
+\033[1;33mcp -r				\033[m	Copia um diretório recursivamente.
+\033[1;33mmv				\033[m	Move um arquivo/diretório ou renomeia. Se o caminho-destino for o mesmo local, 
+					\033[mirá renomear, se for diferente, irá mover.
+\033[1;33mpwd				\033[m	Exibe o caminho completo até o diretório atual.")
+ 
+msg_data_hora=(
+"DATA E HORA
+
+Comandos					Descrição
+
+\033[1;33mdate					\033[mExibe e altera a data e a hora do sistema.
+\033[1;33mdate -s				\033[m	Altera a data e a hora do sistema por extenso.
+\033[1;33mdate -r				\033[m	Exibe a última data e hora de modificação de um arquivo.
+\033[1;33mtouch					\033[mModifica a data e hora de um arquivo.
+\033[1;33mtouch -m arquivo		\033[m	Altera a data e hora de modificação do arquivo.
+") 
+
+msg_mais_comandos=(
+"INFORMAÇÕES GERAIS
+
+Comandos					Descrição
+
+\033[1;33mfree -m				\033[m	Mostra o uso (livre/usado) das memórias.
+\033[1;33mdf -h					\033[mMostra o espaço utilizado pelos dispositivos.
+\033[1;33mdu -h				\033[m	Mostra o espaço utilizado pelos arquivos.
+\033[1;33mcat /proc/cpuinfo		\033[m	Informações do processador do computador.
+\033[1;33mcat /proc/meminfo		\033[m	Informações da memória do computador.
+\033[1;33mcat /proc/partitions		\033[m	Informações sobre discos e partições.
+\033[1;33mpstree -p			\033[m	Mostra cada processo em execução, em forma de árvore, 
+					\033[mcontendo o PID de cada processo.
+\033[1;33mlspci					\033[mExibe informações dos dispositivos da máquina.
+\033[1;33mlsusb					\033[mExibe informações dos dispositivos USB da máquina.
+\033[1;33msensors				\033[m	Exibe informações de temperatura da máquina, CPU, cooler, placa mãe…
+\033[1;33mhddtemp /dev/[sh]d[a-z]		\033[m	Exibe informações sobre temperatura dos dispositivos de armazenamento.
+\033[1;33minxi -v7				\033[mInformações completas sobre o hardware da máquina.
+\033[1;33mwho					\033[mExibe os usuários logados, com sessão aberta no sistema.
+\033[1;33miotop -Pak				\033[mAnalisa a leitura e gravação dos discos.
+\033[1;33mcut -d: -f1 /etc/group		\033[m	Exibe todos os grupos disponíveis no sistema.")
+ 
+msg_comandos_desligar=(
+"DESLIGAR OU REINICIAR O SISTEMA
+
+Comandos					Descrição
+
+\033[1;33mshutdown			\033[m	Desliga a máquina.
+\033[1;33mshutdown -r			\033[m	Reinicia a máquina. Use a palavra “now” para reiniciar imediatamente. 
+				\033[m	Exemplo: shutdown -r now
+\033[1;33mshutdown -h				Desliga a máquina. Use a palavra “now” para desligar imediatamente. 
+				\033[m	Exemplo: shutdown -h now
+\033[1;33mshutdown -c		\033[m		Cancela a execução do shutdown. Apenas se não for usado a palavra “now”.
+\033[1;33mshutdown -h +30	\033[m			Desliga o sistema em 30 minutos.
+\033[1;33mshutdown -r 04:37 	\033[m		"Prezados, o servidor será reiniciado em 1:30h min"	
+				\033[m	Reinicia o sistema na hora informada.
+\033[1;33mreboot			\033[m		Reinicia o sistema.")
+ 
+msg_add_user=(
+"GERENCIAR USUÁRIOS
+
+Comandos					Descrição
+
+\033[1;33madduser bruno			\033[m	Cria o usuário “bruno”.
+\033[1;33madduser bruno lp		\033[m	Adiciona o usuário “bruno” ao grupo “lp”.
+\033[1;33mdeluser –-remove-home bruno	\033[m	Remove o usuário “bruno” e o seu diretório home.")
+ 
+msg_permissoes=(
+"PERMISSÕES
+
+Comandos					Descrição
+
+\033[1;33mchmod				\033[m	Altera a permissão de um arquivo.
+\033[1;33mchmod -R			\033[m	Altera a permissão de um arquivo ou diretório de forma recursiva.
+\033[1;33mchmod +x arquivo		\033[m	Torna o “arquivo” executável.")
+ 
+msg_montar_desmontar=(
+"MONTAR E DESMONTAR DISPOSITIVOS
+
+Comandos					Descrição
+
+\033[1;33mmount				\033[m	Monta um dispositivo.
+\033[1;33mumount			\033[m		Desmonta um dispositivo.
+\033[1;33mumount -l				\033[mDesmonta um dispositivo mesmo que o mesmo esteja em uso;
+\033[1;33mmount -o loop,ro arquivo.iso /mnt/\033[m	Monta uma imagem “.iso”.
+\033[1;33mmount -o remount,rw /			\033[mRemonta o diretório raiz em modo de leitura e gravação.")
+ 
+msg_comp_descomp=(
+"COMPACTAÇÃO E DESCOMPACTAÇÃO
+
+Comandos					Descrição
+
+\033[1;33mtar				\033[m	Junta vários arquivos e gera um arquivo.tar.
+\033[1;33mtar -cvf arquivo.tar Músicas/	\033[m	Gera um “arquivo.tar” do diretório “Músicas”.
+\033[1;33mtar -tvf arquivo.tar		\033[m	Exibe o conteúdo do “arquivo.tar”, sem extraí-lo.
+\033[1;33mtar -xvf arquivo.tar -C /tmp	\033[m	Extrai o conteúdo do “arquivo.tar” no diretório /tmp.
+\033[1;33mtar -cvzf arquivo.tar.gz Músicas/\033[m	Gera um “arquivo.tar.gz” compactando o diretório “Músicas”.
+\033[1;33mtar -tvzf arquivo.tar.gz\033[m		Exibe o conteúdo do “arquivo.tar.gz”, sem extraí-lo.
+\033[1;33mtar -xvzf arquivo.tar.gz	\033[m	Extrai o conteúdo do “arquivo.tar.gz”.
+\033[1;33mtar -cvjf arquivo.tar.gz Músicas/\033[m	Gera um “arquivo.tar.bz2” compactando o diretório “Músicas”.
+\033[1;33mtar -tvjf arquivo.tar.gz\033[m		Exibe o conteúdo do “arquivo.tar.bz2”, sem extraí-lo.
+\033[1;33mtar -xvjf arquivo.tar.gz\033[m		Extrai o conteúdo do “arquivo.tar.bz2”.
+\033[1;33mzip -r arquivo.zip arquivo	\033[m	Compacta um arquivo ou diretório para o formato .zip.
+\033[1;33munzip arquivo.zip	\033[m		Descompacta um arquivo .zip.")
+ 
+msg_processos=(
+"PROCESSOS
+
+Comandos					Descrição
+
+\033[1;33mtop			\033[m		Trabalha com processos em tempo real.
+\033[1;33mhtop				\033[m	Trabalha com processos em tempo real de forma mais amigável.
+\033[1;33mkill			\033[m		Mata processos através.
+\033[1;33mkill -9		\033[m			Mata processos de forma forçada.
+\033[1;33mkillall		\033[m			Mata o aplicativo e todos processos ligados a ele.
+\033[1;33mkillall -9		\033[m		Mata o aplicativo de forma forçada e todos processos ligados a ele. 
+				\033[m	Apaga o que já existe.
+")
+ 
+msg_rede=(
+"REDE E DOWNLOADS
+
+Comando									Descrição
+
+\033[1;33mifconfig			\033[m			Informação e configuração da rede.
+\033[1;33mifconfig eth0 192.168.25.200 netmask 255.255.255.0	\033[mConfigura o dispositivo “eth0” para o IP “192.168.25.200” 
+							\033[me máscara para “255.255.255.0”.
+\033[1;33mifconf eth0 down			\033[m		Desativa a rede do dispositivo eth0.
+\033[1;33mifconf eth0 up			\033[m			Ativa a rede do dispositivo eth0.
+\033[1;33miwlist				\033[m			Recolhe informações de redes wireless.
+\033[1;33miwlist wlan0 scan			\033[m		Pesquisa por redes wireless disponíveis, usando o dispositivo “wlan0”.
+\033[1;33mwget					\033[m		Baixa arquivos da internet.
+\033[1;33mwget -c				\033[m			Baixa arquivos da internet com “resume”, ou seja, recomeçando de onde parou.
+\033[1;33mwget --limit-rate=200k		\033[m			Baixa arquivos da internet limitando a velocidade de download a “200k”.
+\033[1;33mwget -m -p -k -P Diretório Site	\033[m			Baixa um site completo.
+\033[1;33myoutube-dl				\033[m		Baixa vídeos da internet.
+\033[1;33mssh -p 2782 talesam@talesam.org	\033[m			Acessa via ssh o servidor talesam.org com o usuário talesam 
+						\033[m	utilizando a porta 2782.")
+ 
+msg_multimidia=(
+"MULTIMÍDIA
+
+Comandos					Descrição
+
+\033[1;33mmpg123				\033[m	Reproduz arquivos de áudio.
+\033[1;33mmpg123 -C -z ~/Músuca/*		\033[m	Reproduz todos os arquivos do diretório “Música” aleatoriamente, 
+					\033[mativando controles.
+\033[1;33mmplayer				\033[m	Reproduz vídeo.
+\033[1;33mmplayer -vo caca arquivo.avi		\033[mReproduz o “arquivo.avi” em formado ASCII.
+\033[1;33malsamixer				\033[mAjusta os controles de áudio.")
+ 
+msg_visual_text=(
+"VISUALIZAR TEXTOS
+
+Comandos					Descrição
+
+\033[1;33mcat				\033[m	Exibe o conteúdo de um arquivo texto.
+\033[1;33mcat -n			\033[m		Exibe o conteúdo do arquivo texto, enumerando as linhas.
+\033[1;33mhead				\033[m	Lê as primeiras linhas ou caracteres de um arquivo de texto.
+\033[1;33mhead -n 7			\033[m	Lê as sete primeiras linhas de um arquivo de texto.
+\033[1;33mhead -c 33			\033[m	Lê os primeiros 33 caracteres de um arquivo texto.
+\033[1;33mtail				\033[m	Lê as últimas Linhas de um arquivo texto.
+\033[1;33mtail -n 2			\033[m	Lê as duas últimas linhas de um arquivo texto.
+\033[1;33mtail -c 33			\033[m	Lê os últimos 33 caracteres de um arquivo texto.
+\033[1;33mmore				\033[m	Visualiza um arquivo texto de forma interativa.
+\033[1;33mless				\033[m	Visualiza um arquivo texto de forma interativa. Possui mais opções 
+					\033[me é mais otimizado que o more.")
+ 
+msg_grep=(
+"EDITAR E FILTRAR TEXTOS
+
+Comandos							Descrição
+
+\033[1;33mrev				\033[m	Inverte o conteúdo de um arquivo texto. Exemplo: “TALES” para “SELAT”.
+\033[1;33mgrep				\033[m	Faz pesquisa dentro de arquivo texto.
+\033[1;33megrep "t\." arquivo		\033[m	Retorna busca por palavras que tiverem “t.”.
+\033[1;33megrep "carr?o" arquivo	\033[m		Filtra apenas por “carro” e “caro” dentro do “arquivo” texto.
+\033[1;33mgrep "[hG]" arquivo		\033[m	Filtra por todas palavras que contenha “h” minúsculo e “G” maiúsculo.
+\033[1;33mgrep "[a-e]" arquivo		\033[m	Filtra por todas as palavras que contenham as letras: “a, b, c, d, e”, 
+					\033[me minúsculas.
+\033[1;33mgrep "[A-Za-z0-9]" arquivo	\033[m	Filtra por todas as letras maiúsculas, minúsculas e números, 
+					\033[mdeixando de fora apenas caracteres especiais.
+\033[1;33mgrep "[^gb]ato" arquivo	\033[m		Ignora as letras “g” e “b” minúsculas, seguidas dos caracteres “ato”, 
+					\033[mou seja considera válida a palavra jato, mas não considera a palavra gato.
+\033[1;33mgrep "^a" arquivo		\033[m	Filtra palavras que contenham a letra “a” desde que apareçam no início da linha.
+\033[1;33mgrep "t$" arquivo		\033[m	Filtra palavras que contenham a letra “t” no fim da linha.
+\033[1;33mgrep "a\b" arquivo		\033[m	Filtra apenas palavras que contenha letra “a” no fim da palavra.
+\033[1;33mgrep "ar\B" arquivo		\033[m	Filtra o meio das palavras que contenha “ar”, ignora o início e fim.
+\033[1;33mgrep -c "a" arquivo		\033[m	Exibe a quantidade de linhas que contenha a letra “a”.
+\033[1;33mgrep -n la arquivo		\033[m	Exibe o número das linhas que a aparecem as letras “la”.
+\033[1;33mgrep -v a arquivo		\033[m	Exibe as linhas que não apresentam a letra “a” minúscula.
+\033[1;33mgrep -A 2 "TV" arquivo	\033[m		Exibe duas linhas após a ocorrência “TV”.
+\033[1;33mgrep -B 2 "TV" arquivo	\033[m		Exibe duas linhas antes da ocorrência “TV”.
+\033[1;33mgrep -i "a" arquivo		\033[m	Exibe todas as linhas que contenham as letras “a” e “A”.
+\033[1;33mcat lista-MAC | grep Tales	\033[m	Filtra o conteúdo do arquivo “lista-MAC” buscando pelas palavras “Tales”.")
+
+msg_sed=(
+"TROCA E APAGRA PALAVRAS E LINHAS
+
+Comandos											Descrição
+
+\033[1;33mcut								\033[m		Recorta pedaços de texto.
+\033[1;33mcut -d":" -f1,7 /etc/passwd					\033[m		Exibe o primeiro e sétimo campo do arquivo /etc/passwd,
+									\033[m        delimitados por dois pontos “:”.
+\033[1;33mecho "Testando o cut." | cut -d" " -f1			\033[m			Como saída terá apenas a palavra “Testando”, 
+									\033[m	o corte foi feito pelo cut.
+\033[1;33msed								\033[m		Editor de textos não interativo.
+\033[1;33msed '2d' arquivo						\033[m		Deleta a segunda linha do “arquivo”.
+\033[1;33msed '1,3d' arquivo						\033[m		Apaga as linhas do “arquivo” no intervalo 1-3.
+\033[1;33msed '2,4!d' arquivo						\033[m		Apaga todas as linhas do “arquivo”, exceto o intervalo entre 2-4.
+\033[1;33msed '3,$d' arquivo						\033[m		Apaga da linha informada (3) até o final do arquivo.
+\033[1;33msed '/livro/d' arquivo					\033[m			Apaga as linhas que tiveram a palavra “livro”.
+\033[1;33msed 's/.\{7\}//' arquivo					\033[m		Apaga os 7 primeiros caracteres de todas as linhas.
+\033[1;33msed 's/troca isso/por isso/g' arquivo				\033[m		Substitui todas as frases “troca isso” pelas frases “por isso”.
+\033[1;33msed '2s/^/Incluído no início da linha 2 /' arquivo		\033[m		Inclui o texto no início da linha informada.
+\033[1;33msed '2s/$/Incluído no final da linha 2 /' arquivo		\033[m		Inclui texto no final da linha informada.
+\033[1;33msed '3s/.*/Novo texto da linha 3/' arquivo			\033[m		Substitui todo o conteúdo de uma linha específica.
+\033[1;33msed -e '3a\' -e 'Nova linha inserida após a linha 3' arquivo	\033[m		Insere uma nova linha de texto após linha especificada.
+\033[1;33msed -e '3i\' -e 'Nova linha inserida antes da linha 3' arquivo\033[m			Insere uma nova linha de texto antes de uma linha especificada.
+\033[1;33msed 's/[ ]\+/ /g' arquivo					\033[m		Apaga espaços em branco consecutivos.
+\033[1;33msed ':a;$!N;s/\n//;ta;' arquivo				\033[m					Remove todas as quebras de linha, 
+									\033[m	deixando todo o texto em apenas uma linha.
+\033[1;33mecho "Livro de Linux" | tr '[a-z]' '[A-Z]'				\033[m	Converte todas as letras para maiúsculas.
+\033[1;33msed 'y/abcdefghijklmnopqrstuvwxyzàáâãéêíóôõúç/ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÉÊÍÓÔÕÚÇ/' arquivo	\033[m	Converte todas as letras para maiúsculas.
+\033[1;33msed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÂÃÉÊÍÓÔÕÚÇ/abcdefghijklmnopqrstuvwxyzàáâãéêíóôõúç/' arquivo	\033[m	Converte todas as letras para minúsculas.
+\033[1;33msed 's/^/§ /;:a;s/\(.*\)§ \+\([^ ]\+\)/\2 \1§/;ta;s/§//' arquivo		\033[mInverte a ordem das palavras em cada frase.
+\033[1;33msed 's|^ *\bNAME\b *=.*|NAME=Debian|' arquivo					\033[m	Modelo para troca de parâmetros em arquivos de configuração, 
+										\033[mno exemplo troca o valor que estiver na variável NAME por Debian
+\033[1;33msed '/tag>/,/<\/tag>/d' arquivo							\033[mApaga as linhas que possuem as tags e as linhas que estiverem entre as tags")
+
+msg_awk=(
+"FILTRO DE PALAVRAS
+
+Comandos							Descrição
+
+\033[1;33mawk					  	\033[m Linguagem de programação interativa.
+\033[1;33mawk '{print $1}' arquivo			\033[m 	Exibe as primeiras palavras de cada linha.
+\033[1;33mawk '{print $2 ", preço " $4}' arquivo	\033[m         Adiciona a palavra “preço” entre a coluna 2 e 4 de cada linha.
+\033[1;33mawk -F ":" '{print $2}' arquivo		\033[m   	 Filtra o segundo campo com o delimitador dois pontos.")
+
+ 
+msg_busca=(
+"PROCURAR ARQUIVOS E DIRETÓRIOS
+
+Comando															Descrição
+
+\033[1;33mfind											\033[m	Pesquisa por arquivos.
+\033[1;33mfind $HOME -name "Janelas" -exec rm -vf {} \;						\033[m	Procura pelos arquivos com nome de “Janelas” no diretório do usuário e os apaga.
+\033[1;33mfind . -mtime 3 -print								\033[m	Procura no diretório corrente por arquivos que foram modificados a 3 dias.
+\033[1;33mfind . \( -iname "*.png" -o -iname "*.jpg" \) -print -exec tar -rf images.tar {} \;	\033[m	Procura por imagens do tipo ".png" e ".jpg" no diretório corrente e 
+											\033[m	cria um pacote chamado imagens.tar com as imagens encontradas.
+\033[1;33mfind / -group users -print 2>/dev/null						\033[m	Procura em todo sistema por arquivos pertencentes ao grupo users.
+\033[1;33mfind ~/Música -size +10M -exec ls -lh {} \;						\033[m	Procura por arquivos maiores que 30M no diretório ~/Músicas, listando o arquivo com o seu tamanho.
+\033[1;33mfind ~/Música -size +10M -size -30M -exec ls -lh {} \;				\033[m	Limita o tamanho do arquivo, por exemplo: maior que 10M e menor que 30M.
+\033[1;33mfind /var/spool/cups/tmp/ -mtime +7 -exec rm -Rf {""} \;				\033[m	Procura e remove arquivos de uma área temporária aonde os arquivos só devem permanecer por uma semana.
+\033[1;33mfind $HOME -type d -exec chmod 755 {} \;						\033[m	Modifica as permissões de diretórios recursivamente para 755 na $HOME do usuário.
+\033[1;33mfind $HOME -type f -exec chmod 644 {} \;						\033[m	Modifica as permissões de arquivos recursivamente para 644 na $HOME do usuário.
+\033[1;33mlocate										\033[m	Procura por arquivos no sistema que estão em uma base de dados.
+\033[1;33mupdatedb										\033[m	Atualiza o banco de dados de arquivos que é utilizado pelo comando locate.")

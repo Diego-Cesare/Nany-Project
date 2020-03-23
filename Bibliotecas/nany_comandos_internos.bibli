@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#============================== Menssagens para comandos internos ====================================#
+
+info_pacote(){
+clear
+echo -e "Nany: \033[37mMe diga o nome do pacote que deseja saber as informações\033[m\n" | pv -qL 80 
+
+read -r -e pkg
+
+[[ -n $pkg ]] && sudo pacman -Si "$pkg"
+
+echo -e "Nany: \033[37mIsso é tudo que encontrei sobre o \033[36m( $pkg )\033[m" | pv -qL 80 
+
+}
+
+encontre_pacote(){
+clear
+echo -e "Nany: \033[37mQual o pacote voçe gostaria que eu encontrace?\033[m\n" | pv -qL 80 
+
+read -r -e pkg
+
+[[ -n $pkg ]] && sudo pacman -Ss "$pkg"
+
+echo -e "Nany: \033[37mEsses são todos os pacotes relacionados a \033[36m( $pkg )\033[m" | pv -qL 80 
+}
+
+delete_pacote(){
+clear
+echo -e "\033[4;31mAtenção! ${USER}\033[36m Esta operação exige cuidado\033[m\n" | pv -qL 80 
+echo -e "Nany: \033[37mDigite o nome do pacote que deseja deletar\033[m" | pv -qL 80 
+
+read -r -e pkg
+
+[[ -n $pkg ]] && echo -e "Nany: \033[37m Digite sua senha e aguarde um momento enquanto eu deleto o pacote\033[m ( $pkg )" | pv -qL 80 
+	sudo pacman -R "$pkg" >> /dev/null &&  echo -e "Nany: \033[37mProntinho! o pacote \033[36m( $pkg ) \033[37mfoi deletado :)\033[m" | pv -qL 80 
+
+}
+
+info_clima(){
+clear
+echo -e "Nany: \033[37mEssas são todas as informações sobre o clima na sua região\033[m" | pv -qL 80 
+	sleep 1
+	curl wttr.in
+}
+
+install_pacote(){
+clear
+echo -e "\033[36mDigite o nome do pacote que deseja instalar\033[m" | pv -qL 80 
+echo -e "Nany: \033[37mAlias ${USER} digite o nome correto, eu trabalho com logica e não com adivinhação kkkkkk\033[m" | pv -qL 100 
+
+	read -r -e pkg
+
+[[ -n $pkg ]] && echo -e "Nany: \033[37m Digite sua senha e aguarde um momento enquanto eu instalo o pacote\033[m ( $pkg )" | pv -qL 80 
+    sudo pacman -S "$pkg" >> /dev/null &&  echo -e "Nany: \033[37mProntinho! o pacote \033[0m$pkg \033[37mfoi instalado :)\033[m" | pv -qL 80 
+}

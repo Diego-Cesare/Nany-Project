@@ -1,0 +1,160 @@
+#================================= Comandos principais ====================================#
+
+msg_calendario=(
+"`cal`"
+)
+
+msg_calendario_todo=(
+"`cal 12`"
+)
+
+msg_orfao=(
+"\033[37mVoce tem \033[31m`pacman -Qu | wc -l `\033[37m pacotes orfãos\033[m"
+"\033[37mTem \033[31m`pacman -Qu | wc -l `\033[37m pacotes orfãos\033[m"
+"\033[37mTem \033[31m`pacman -Qu | wc -l `\033[37m pacotes que não estao em uso\033[m"
+"\033[31m`pacman -Qu | wc -l `\033[37m pacotes orfãos\033[m"
+)
+
+msg_atualizar=(
+"\033[37mMuito bem, primeiro vamos sincronizar seu banco de dados.\033[m"
+"\033[37mMuito bem, vamos sincronizar seus repositorios\033[m"
+"\033[37mOK... Atualizando banco de dados!\033[m"
+"\033[37mTudo bem,aguarde um instante em quanto eu sincronizo os repositorios.\033[m"
+)
+
+msg_que_bom=(
+"\033[37mSim\033[m"
+"\033[37mMuito bom\033[m"
+"\033[37mBom mesmo\033[m"
+"\033[37mTambem acho\033[m"
+"\033[37mBom de mais\033[m"
+"\033[37mMais que bom\033[m"
+"\033[37mAham\033[m"
+"\033[37mUhum\033[m"
+"\033[37m;)\033[m"
+"\033[37m:)\033[m"
+"\033[37m;p\033[m"
+)
+
+msg_tenho_atualizacoes=(
+"\033[37m Espera um pouco, irei verificar o banco de dados\033[m"
+"\033[37m Estou agora mesmo verificando por atualizações\033[m"
+"\033[37mOk,espera só um instante\033[m"
+"\033[37mVamos ver!\033[m"
+"\033[37mVou ver kkkkk, seu desejo é uma ordem kkkkk\033[m"
+"\033[37mVou agora mesmo verificar \033[m"
+)
+
+msg_quantos_pacotes=(
+"\033[37mOk, até o momento seu sistema possue \033[31m`pacman -Q | wc -l`\033[m,\033[37m pacotes instalados.\033[m"
+"\033[37mMuito bem, voç tem exatos \033[31m`pacman -Q | wc -l`\033[m,\033[37m pacotes instalados\033[m"
+"\033[37mHuuummm, voçe esta de dieta? Voçe tem apenas \033[31m`pacman -Q | wc -l`\033[m, \033[37mpacotes instalados kkkkkkk.\033[m"
+"\033[37mOlha só kkkkk, voçe esta muito economico só \033[31m`pacman -Q | wc -l`\033[m,\033[37m pacotes\033[m"
+"\033[37mParabens, \033[31m`pacman -Q | wc -l`,\033[m\033[37m pacotes instalados, blin blin blin, temos um vencedor kkkkkk\033[m"
+)
+
+msg_cache=(
+"\033[37mAte o momento seu cache tem \033[31m`cd /var/cache/pacman/pkg/ && ls | wc -l` \033[37mpacotes\033[m"
+"\033[31m`cd /var/cache/pacman/pkg/ && ls | wc -l` \033[37mpacotes em cache\033[m"
+"\033[37mApenas \033[31m`cd /var/cache/pacman/pkg/ && ls | wc -l` \033[37mpacotes em cache\033[m"
+"\033[37mUm total de \033[31m`cd /var/cache/pacman/pkg/ && ls | wc -l` \033[37mpacotes em cache\033[m"
+"\033[37mSão \033[31m`cd /var/cache/pacman/pkg/ && ls | wc -l` \033[37mpacotes em cache\033[m"
+"\033[37mEsse é o total de pacotes em cache \033[31m`cd /var/cache/pacman/pkg/ && ls | wc -l`\033[m"
+
+)
+
+msg_memoria_total=(
+"\033[37mPoderia ter mais kkkkk. Voçe tem \033[31m`free -h | sed -n 2p | awk '{print $2}'`\033[37m de memoria total.\033[m"
+"\033[37mVoçe tem \033[31m`free -h | sed -n 2p | awk '{print $2}'`\033[37m de memoria\033[m"
+"\033[37mMelhor começar a penssar em comprar mais um pouco de memoria,voçe tem \033[31m`free -h | sed -n 2p | awk '{print $2}'`\033[37m de memoria\033[m"
+"\033[37mOk voçe tem \033[31m`free -h | sed -n 2p | awk '{print $2}'`\033[37m de memoria\033[m"
+"\033[37mEsta tudo bem voçe tem \033[31m`free -h | sed -n 2p | awk '{print $2}'`\033[37m de memoria total\033[m"
+)
+
+msg_memoria_livre=(
+"\033[37mEsta tudo bem voce tem \033[31m`free -h | sed -n 2p | awk '{print $4}'`\033[37m,de memoria livre\033[m"
+"\033[37mPode aproveitar voce ainda tem \033[31m`free -h | sed -n 2p | awk '{print $4}'`\033[37m,de memoria livre\033[m"
+"\033[37mOk, voçe tem \033[31m`free -h | sed -n 2p | awk '{print $4}'`, \033[37mde memoria livre\033[m"
+"\033[37mTudo tranquilo, voce tem \033[31m`free -h | sed -n 2p | awk '{print $4}'` \033[37mde memoria disponivel\033[m"
+"\033[37mTa suave, voce tem \033[31m`free -h | sed -n 2p | awk '{print $4}'`\033[37m,de memoria livre\033[m"
+"\033[31m`free -h | sed -n 2p | awk '{print $4}'`,\033[37m de memoria livre\033[m"
+"\033[31m`free -h | sed -n 2p | awk '{print $4}'`\033[m" 
+"\033[37mVoçe tem tudo isso \033[31m`free -h | sed -n 2p | awk '{print $4}'`\033[37m, kkkkkk. Brincadeira kkkk\033[m"
+"\033[37mPor isso estou canssada, voce tem \033[31m`free -h | sed -n 2p | awk '{print $4}'` \033[37mde memoria livre\033[m"
+"\033[37mJá já eu travo kkkkkk, voçe tem \033[31m`free -h | sed -n 2p | awk '{print $4}'`\033[37m de memoria livre kkkk.\033[m"
+)
+
+msg_memoria_usada=( 
+"\033[37mEsta tudo ok, seu sistema esta usando apernas \033[31m`free -h | sed -n 2p | awk '{print $3}'`\033[37m, de memoria\033[m"
+"\033[37mTudo certo, esta com \033[31m`free -h | sed -n 2p | awk '{print $3}'`\033[37m, de memoria em uso\033[m"
+"\033[31m`free -h | sed -n 2p | awk '{print $3}'`,\033[37m de memoria em uso\033[m"
+"\033[37mMemoria foi feita para se usar kkkkk. Mas o sistema esta usando \033[31m`free -h | sed -n 2p | awk '{print $3}'`\033[37m, de memoria\033[m"
+"\033[37mRelaxa, esta usando apenas \033[31m`free -h | sed -n 2p | awk '{print $3}'` \033[37mde memoria\033[m"
+"\033[37mTranquilo, apenas \033[31m`free -h | sed -n 2p | awk '{print $3}'`\033[37m de memoria em uso\033[m"
+"\033[37mFica frio, hoje eta suave, apenas \033[31m`free -h | sed -n 2p | awk '{print $3}'`\033[37m de memoria em uso\033[m"
+"\033[37mQue economia em kkkkkk, apenas \033[31m`free -h | sed -n 2p | awk '{print $3}'`\033[37m de memoria sendo usada\033[m"
+"\033[37mDesencana da memoria kkkkkk, o sistema esta usando apenas \033[31m`free -h | sed -n 2p | awk '{print $3}'`,\033[37m de memoria.\033[m"
+)
+
+msg_nome_atualizar=(
+"\033[37mSão estes aqui\033[31m `pacman -Quei | sed -n 1p `\033[m"
+"\033[37mEstes \033[31m`pacman -Quei | sed -n 1p `\033[m"
+"\033[31m\033[31m `pacman -Quei | sed -n 1p `\033[m"
+"\033[37m${USER} estão todos aqui \033[31m `pacman -Quei | sed -n 1p `\033[m"
+"\033[37mSão esses os pacotes \033[31m`pacman -Quei | sed -n 1p `\033[m"
+)
+
+
+msg_disco_total=(
+"\033[37mSeu disco tem um total de \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria\033[m"
+"\033[37mUm grandioso espaço de \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m memoria kkk\033[m"
+"\033[37mNossa ${USER} só \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria kkkkkkk\033[m"
+"\033[37mEsta na hora de um upgrade kkkkkkkk, \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria\033[m"
+"\033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m, de memoria\033[m"
+"\033[37mIncriveis \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria kkkkk\033[m"
+"\033[37mPosso viver com \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria kkkk\033[m"
+"\033[37mAqui esta \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria\033[m"
+"\033[37mPronto! seu disco tem \033[31m`df -h | sed -n 4p | awk '{print $2}'` \033[37mde memoria\033[m"
+"\033[37mEsta na tela, \033[31m`df -h | sed -n 4p | awk '{print $2}'` \033[37mde memoria\033[m"
+"\033[37mProntinho, ele tem \033[31m`df -h | sed -n 4p | awk '{print $2}'`\033[37m de memoria\033[m"
+)
+
+msg_disco_usado=(
+"\033[37mVoçe esta usando \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37m de seu disco\033[m"
+"\033[37mUm total de \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37mdisco usado\033[m"
+"\033[37mA micharia de\033[31m `df -h | sed -n 4p | awk '{print $3}'`\033[37m de uso de disco kkkkk\033[m"
+"\033[37m${USER}, voçe esta muito economico kkkkk usando apenas \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37m do seu disco\033[m"
+"\033[37mAqui esta \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37mde disco usado\033[m"
+"\033[37mSó isso aqui \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[m"
+"\033[37mQuase nada \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37mapenas\033[m"
+"\033[37mQuanta economia \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37mde disco usado\033[m"
+"\033[37mVoçe esta hostentando um total de \033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37mdisco usado kkkk\033[m"
+"\033[37mPode ficar tranquilo ${USER} voçe usa apenas\033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37m de seu disco\033[m"
+"\033[37mQue rufem os tambores kkkkkk,\033[31m `df -h | sed -n 4p | awk '{print $3}'` \033[37m de disco usado.\033[m"
+)
+
+msg_dia_hoje=(
+"\033[37mHoje é dia \033[31m`date +%d/%m/%y`\033[m"
+"\033[37mDia \033[31m`date +%d/%m/%y`\033[m"
+"\033[37mNo meu calendario é,\033[31m`date +%d/%m/%y`\033[m"
+"\033[31m`date +%d/%m/%y`\033[m"
+)
+
+msg_sair=(
+"\033[37mAte logo\033[m"
+"\033[37mVolte sempre kkkkk\033[m"
+"\033[37mEntão tchaw beijos\033[m"
+"\033[37mVou sentir saudades, beijos\033[m"
+"\033[37mNão demore muito pra voltar, beijos\033[m"
+"\033[37mAte mais tarde\033[m"
+"\033[37mTchaw Tchaw\033[m"
+"\033[37mBay Bay\033[m"
+"\033[37mOk, fico te esperando,beijos\033[m"
+)
+
+msg_hora=(
+"\033[37mAgoras são \033[31m`date +%H:%M  ` \033[m"
+"\033[37mBem agora são \033[31m`date +%H:%M  `\033[m"
+"\033[37mSão \033[31m`date +%H:%M`\033[m"
+"\033[37mOloco bixo kkkkkk sao exatamente \033[31m`date +%H:%M` \033[m"
+"\033[37mMolesa são \033[31m`date +%H:%M`\033[m")

@@ -1,0 +1,43 @@
+#======================== Menssagens com caminhos para ajudas externas =======================#
+
+msg_temas_icones=(
+"\033[1;37mAqui tem varios \033[mhttps://www.gnome-look.org/browse/cat/132/order/latest/"
+"\033[1;37mNossa, aqui tem muitos\033[m https://www.gnome-look.org/browse/cat/132/order/latest/"
+"\033[1;37mTem alguns inscriveis aqui \033[mhttps://www.gnome-look.org/browse/cat/132/order/latest/"
+"\033[1;37mEsse é um dos melhores locais para icones \033[mhttps://www.gnome-look.org/browse/cat/132/order/latest/"
+"\033[1;37mTenta esse aqui\033[m https://www.gnome-look.org/browse/cat/132/order/latest/"
+"\033[1;37mIsso é facil \033[mhttps://www.gnome-look.org/browse/cat/132/order/latest/"
+"\033[1;37mMolesa \033[mhttps://www.gnome-look.org/browse/cat/132/order/latest/ \033[1;37m, ai esta\033[m"
+)
+
+msg_temas_gtk=(
+"\033[1;37mEsse aqui olha, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+"\033[1;37mUm dos melhores, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+"\033[1;37mEsse é top, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+"\033[1;37mAi esta, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+"\033[1;37mNão precisa repetir kkkk, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+"\033[1;37mOpá esta na mão, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+"\033[1;37mÈ pra ja, \033[mhttps://www.gnome-look.org/browse/cat/135/order/latest/"
+)
+
+msg_papeis_parede=(
+"\033[1;37mBem aqui \033[mhttps://alphacoders.com/"
+"\033[1;37mAqui \033[mhttps://alphacoders.com/"
+"\033[1;37mAqui tem varios \033[mhttps://alphacoders.com/"
+"\033[1;37mÈ só escolher o melhor \033[mhttps://alphacoders.com/"
+"\033[1;37mTem uns lindos aqui \033[mhttps://alphacoders.com/"
+"\033[1;37mEscolha o mais legal \033[mhttps://alphacoders.com/"
+"\033[1;37mEu te recomendo esse aqui \033[mhttps://alphacoders.com/"
+)
+
+msg_apt=(
+"\033[1;37mVoçe pode obter informaçoes aqui \033[1;32mhttps://wiki.debian.org/pt_BR/Apt \033[1;37mque é a Wiki oficial do apt\033[m
+
+\033[1;37mEste video pode te ajudar \033[1;32mhttps://www.youtube.com/watch?v=CXKiaarncGQ\033[m
+
+"
+)
+
+msg_pacman=(
+"\033[1;37mPara um conteudo mais completo consulte a Arch wiki em:\033[1;32m https://wiki.archlinux.org/index.php/Pacman\033[m"
+)

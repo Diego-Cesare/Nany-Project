@@ -1,0 +1,292 @@
+#!/usr/bin/env bash
+
+#============================== Especificacoes ============================#
+# Nome: Nany
+
+# Versao: Beta 1.01
+
+# Criado em: 14/03/2020
+
+# Funcao: Interagir com o usuario de forma simples e amigavel,
+# auxiliando no uso do terminal de forma simples.
+# Encinar o usuario como funcionam os comandos usados no terminal,
+# e encaminhas os usuarios para documentaçoes que possam sanar suas duvidas recorrentes.
+
+# Criador: Diego Cesare<diegocesare300491@gmail.com>
+
+# Licença: GNU
+
+# Dependencias: pv curl inxi 
+
+#=========================  Teste de dependencias =========================#
+
+if ! type -P pv>/dev/null 2>&1; then
+	echo -e "\033[1;37mOi eu sou a \033[1;36mNany\033[1;37m, voçe deve ter o comando \033[1;32mpv\033[1;37m instalado para continuar.\033[m"
+	echo -e "\033[1;37mInstale e tente novamente.\033[m"
+
+	exit 1
+
+elif ! type -P inxi>/dev/null 2>&1; then
+	echo -e "\033[1;37mOi eu sou a \033[1;36mNany\033[1;37m, voçe deve ter o comando \033[1;32minxi\033[1;37m instalado para continuar.\033[m"
+        echo -e "\033[1;37mInstale e tente novamente.\033[m"
+
+	exit 1
+fi
+
+#==========================================================================#
+
+#====================== Chamando o dicionario de converças ================#
+source /home/diego/Nany.project/nany_uso.bibli
+source /home/diego/Nany.project/nany_comandos_principais.bibli
+source /home/diego/Nany.project/nany_caminhos_externos.bibli
+source /home/diego/Nany.project/nany_comandos_internos.bibli
+source /home/diego/Nany.project/nany_interação.bibli
+source /home/diego/Nany.project/nany_comandos_exemplos.bibli
+#==========================================================================#
+#============================= Lista de comandos ==========================#
+
+clear
+while :; do
+	read -r -e -p "${USER}: " msg
+	case $msg in
+
+*"comandos mais basicos"*|*"comandos basicos"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_comandos_basicos[@]}" | pv -qL 80	;;
+
+*"comandos de data"*|*"comandos de hora"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_data_hora[@]}" | pv -qL 80	;;
+
+*"comandos multimidia"*|*"comandos para musicas"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_multimidia[@]}" | pv -qL 80	;;
+
+*"comandos grep"*|*"comando grep"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_grep[@]}" | pv -qL 80	;;
+
+*"comandos sed"*|*"comando sed"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_sed[@]}" | pv -qL 80	;;
+
+*"comandos awk"*|*"comando awk"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_awk[@]}" | pv -qL 80	;;
+
+*"comandos de busca"*|*"comando de busca"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_busca[@]}" | pv -qL 80	;;
+	
+*"comandos mais comuns"*|*"comandos mais simples"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_comandos_manipulacao[@]}" | pv -qL 80	;;
+
+*"comandos do sistema"*|*"comandos para visualizar"*)
+	clear
+        echo -e "Nany: \c" && echo -e "${msg_mais_comandos[@]}" | pv -qL 80      ;;
+
+*"para desligar"*|*"para reiniciar"*)
+	clear
+        echo -e "Nany: \c" && echo -e "${msg_comandos_desligar[@]}" | pv -qL 80      ;;
+
+*"adicionar um usuario"*|*"adicionar usuario"*|*"deletar usuario"*)
+	clear
+        echo -e "Nany: \c" && echo -e "${msg_add_user[@]}" | pv -qL 80      ;;
+
+*"permitir execucao"*|*"dar permissao"*)
+	clear
+        echo -e "Nany: \c" && echo -e "${msg_permissoes[@]}" | pv -qL 80      ;;
+
+*"visualizar processos"*|*"matar processos"*|*"finalizar um processo"*)
+        clear
+        echo -e "Nany: \c" && echo -e "${msg_processos[@]}" | pv -qL 80      ;;
+
+*"comandos de rede"*|*"download pelo terminal"*)
+        clear
+        echo -e "Nany: \c" && echo -e "${msg_rede[@]}" | pv -qL 80      ;;
+
+*"compactar"*|*"descompactar"*)
+        clear
+        echo -e "Nany: \c" && echo -e "${msg_comp_descomp[@]}" | pv -qL 80      ;;
+
+*"montar um dispositivo"*|*"desmontar um dispositivo"*)
+        clear
+        echo -e "Nany: \c" && echo -e "${msg_montar_desmontar[@]}" | pv -qL 80      ;;
+
+*"todo o sistema"*|*"minha maquina"*)
+	clear
+	echo -e "Nany: \c" && echo -e "\033[1;37mAqui estão, todos os dispositivos e informações do seu sistema\033[m" | pv -qL 25 && inxi -F	;;
+
+*"delete"*|"exclua"|*"apague"*)
+	delete_pacote	;;
+
+*"clima"*|*"chover"*)
+	info_clima	;;
+
+*"instale"*)
+	install_pacote	;;
+
+*"informe sobre um"*|*"informacao de um "*|*"informar sobre um"*)
+	info_pacote	;;
+
+*"encontre"*|*"busque"*|*"pesquise"*|*"pesquisar"*)
+	encontre_pacote	;;
+
+"horas"*|*"horas"*|*"hora"*|*"hora"*)
+	hr="$(( RANDOM % 4))"
+	echo -e "Nany: \c" && echo -e "${msg_hora[$hr]}" | pv -qL 25	;;
+
+*"palavras magicas"*|*"magicas"*|*"correto"*)
+	clear
+	echo -e "${msg_nany_dicionario[@]}"	|  pv -qL 200;;
+
+*"sair"*|*"tchaw"*|*"ate logo"*|*"ate logo"*|*"vou nessa"*|*"vou nessa"*)
+	sair="$(( RANDOM % 9))"
+	echo -e "Nany: \c" && echo -e  "${msg_sair[$sair]}" | pv -qL 25 && sleep 3 && exit && exit	;;
+
+*"memoria total"*|*"total de memoria"*|*"memoria eu tenho"*)
+	mem="$(( $RANDOM % 3))"
+	echo -e "Nany: \c" && echo -e "${msg_memoria_total[$mem]}" | pv -qL 25 	;;
+
+*"memoria livre"*|*"livre de memoria"*)
+	memlivre="$(( $RANDOM % 9))"
+	echo -e "Nany: \c" && echo -e "${msg_memoria_livre[$memlivre]}" | pv -qL 25	;;
+
+*"consumo de memoria"*|*"memoria usada"*|*"usando de memoria"*|*"memoria sendo"*|*"memoria esta usando"*|*"sendo usado de memoria"*|*"sendo usada"*)
+	memusada="$(( $RANDOM % 8))"
+	echo -e "Nany: \c" && echo -e "${msg_memoria_usada[$memusada]}" | pv -qL 25	;;
+
+*"espaco em disco"*|*"espaco que tenho"*|*"total do meu disco"*)
+	discototal="$(( $RANDOM % 10))"
+	echo -e "Nany: \c" && echo -e "${msg_disco_total[$discototal]}" | pv -qL 25	;;
+
+*"sendo usado"*|*"usando do meu disco"*)
+	discousado="$(( $RANDOM % 10))"
+	echo -e "Nany: \c" && echo -e "${msg_disco_usado[$discousado]}"	| pv -qL 25;;
+
+*"icones"*|*"icones legais"*|*"encontrar icones"*|*"temas de icones"*)
+	icones="$(( $RANDOM % 6))"
+	echo -e "Nany: \c" && echo -e "${msg_temas_icones[$icones]}" | pv -qL 25	;;
+
+*"temas gtk"*)
+	temasgtk="$(( $RANDOM % 6))"
+	echo -e "Nany: \c" && echo -e "${msg_temas_gtk[$temasgtk]}" | pv -qL 25	;;
+
+*"papeis de parede"*|*"planos de fundo"*|*"wallpapers"*)
+	fundos="$(( $RANDOM % 6))"
+	echo -e "Nany: \c" && echo -e "${msg_papeis_parede[$fundos]}" | pv -qL 25	;;
+
+"comecar"*|*"comecar"*|*"comeco"*|*"comeco"*)
+	comecar="$(( $RANDOM % 5))"
+	echo -e "Nany: \c" && echo -e "${msg_comecar[$comecar]}" | pv -qL 25	;;
+
+*"bom dia"*)
+	x="$(( $RANDOM % 5))"
+	echo -e "Nany: \c" && echo -e "${msg_bom_dia[$x]}" | pv -qL 25	;;
+
+*"boa tarde"*)
+        tarde="$(( $RANDOM % 5))"
+        echo -e "Nany: \c" && echo -e "${msg_boa_tarde[$tarde]}" | pv -qL 25  ;;
+
+*"boa noite"*)
+        noite="$(( $RANDOM % 5))"
+        echo -e "Nany: \c" && echo -e "${msg_boa_noite[$noite]}" | pv -qL 25  ;;
+
+"quantos"*|*"quantos"*)
+	q="$(( $RANDOM % 5))"
+	echo -e "Nany: \c" && echo -e "${msg_quantos_pacotes[$q]}" | pv -qL 25	;;
+
+
+*"k"*)
+	k="$(( $RANDOM % 4))"
+	echo -e "Nany: \c" && echo -e "${msg_rsrsrs[$k]}" | pv -qL 25	;;
+
+"oi")
+	o="$(( $RANDOM % 6))"
+	echo -e  "Nany: \c" && echo -e "${msg_oi[$o]}" | pv -qL 25	;;
+
+*"obrigado"*|*"valeu"*)
+	obg="$(( $RANDOM % 7))"
+	echo -e "Nany: \c" && echo -e "${msg_obrigado[$obg]}" | pv -qL 25	;;
+
+
+*"atualizar"*|*"atualizacao"*|*"atualizacoes"*)
+    y="$(( $RANDOM % 4))"
+    echo -e  "Nany: \c" && echo -e "${msg_atualizar[$y]}" | pv -qL 25 && sudo pacman -Sy >> /dev/null && echo -e "Nany: \c" && echo -e "\033[37mVoçe tem\033[31m (`pacman -Qu | wc -l`)\033[m\033[37m, pacotes para atualizar!\033[m" | pv -qL 25 && pacman -Qu	;;
+    
+
+*"em cache?"*|*"o cache?"*)
+	cache="$(( $RANDOM % 5))"
+	echo -e "Nany: \c" && echo -e "${msg_cache[$cache]}" | pv -qL 25	;;
+
+*"atualize"*)
+        a="(( $RANDOM % 7))"
+        echo -e "Nany: \c" && echo -e "${msg_tenho_atualizacoes[$a]}" | pv -qL 25 & sleep 3 && sudo pacman -Su >> /dev/null && echo -e "Nany: \c" && echo -e "\033[37mTudo pronto ${USER}!!!\033[m" | pv -qL 25      ;;
+
+*"limpe a tela"*|*"limpar tela"*)
+	clear	;;
+
+*"que bom"*|*"muito bom"*)
+	bom="(( $RANDOM % 11))"
+	echo -e "Nany: \c" && echo -e "${msg_que_bom[$bom]}" | pv -qL 25	;;
+
+*"fazendo"*)
+	fazendo="(( $RANDOM % 16))"
+	echo -e "Nany: \c" && echo -e "${msg_fazendo_oque[$fazendo]}" | pv -qL 25	;;
+
+"dia"*|*"dia e hoje"*)
+	dia="(( $RANDOM % 4))"
+	echo -e "Nany: \c" && echo -e "${msg_dia_hoje[$dia]}" | pv -qL 25	;;
+
+
+*"como voce esta?"*|*"tudo bem?"*)
+	c="(( $RANDOM % 18))"
+	echo -e "Nany: \c" && echo -e "${msg_como_voce_esta[$c]}" | pv -qL 25	;;
+
+"bem")
+	d="(( $RANDOM % 8))"
+	echo -e "Nany: \c" && echo -e "${msg_resposta_como_voce_esta[$d]}" | pv -qL 25	;;
+
+*"nao sei"*)
+	n="(( $RANDOM % 5))"
+	echo -e "Nany: \c" && echo -e "${msg_nao_sei[$n]}" | pv -qL 25	;;
+
+*"nany"*)
+	oi="(( $RANDOM % 16))"
+	echo -e "Nany: \c" && echo -e "${msg_oi_nany[$oi]}" | pv -qL 25	;;
+
+*"legal"*|*"nossa"*|*"massa"*)
+	legal="(( RANDOM % 10))"
+	echo -e "Nany: \c" && echo -e "${msg_legal[$legal]}" | pv -qL 25	;;
+
+*"faz"*|*"fazer"*|*"capaz"*|"oque mais?"|"mais oque?")
+	fazer="(( $RANDOM % 13))"
+	echo -e "Nany: \c" && echo -e "${msg_oque_pode_fazer[$fazer]}" | pv -qL 25	;;
+
+*"calendario do ano"*|*"calendario todo"*)
+	caltodo="(( $RANDOM % 1))"
+	echo "Nany: " && echo "${msg_calendario_todo[$caltodo]}" 	;;
+
+*"calendario"*)
+        cal="(( $RANDOM % 1))"
+        echo "Nany: " && echo -e "${msg_calendario[$cal]}" ;;
+
+*"orfaos"*|*"orfao"*)
+        orfao="(( $RANDOM % 4))"
+        echo -e "Nany: \c" && echo -e "${msg_orfao[$orfao]}" | pv -qL 25	;;
+
+*"comandos do debian"*|*"usar o apt"*|*"o apt-get"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_apt[@]}"| pv -qL 25	;;
+
+*"comandos do arch"*|*"usar o pacman"*)
+	clear
+        echo -e "Nany: \c" && echo -e "${msg_pacman[@]}" | pv -qL 25	;;
+
+*"oque e linux"*|*"o linux"*)
+	clear
+	echo -e "Nany: \c" && echo -e "${msg_oque_e_linux[@]}" | pv -qL 25	;;
+esac
+done
+
