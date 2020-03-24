@@ -36,12 +36,12 @@ fi
 #==========================================================================#
 
 #====================== Chamando o dicionario de converças ================#
-source /home/diego/Nany.project/nany_uso.bibli
-source /home/diego/Nany.project/nany_comandos_principais.bibli
-source /home/diego/Nany.project/nany_caminhos_externos.bibli
-source /home/diego/Nany.project/nany_comandos_internos.bibli
-source /home/diego/Nany.project/nany_interação.bibli
-source /home/diego/Nany.project/nany_comandos_exemplos.bibli
+source /home/diego/Nany.Project/Bibliotecas/nany_caminhos_externos.bibli
+source /home/diego/Nany.Project/Bibliotecas/nany_comandos_exemplos.bibli
+source /home/diego/Nany.Project/Bibliotecas/nany_comandos_principais.bibli
+source /home/diego/Nany.Project/Bibliotecas/nany_interação.bibli
+source /home/diego/Nany.Project/Bibliotecas/nany_uso.bibli
+source /home/diego/Nany.Project/Bibliotecas/nany_comandos_internos.bibli
 #==========================================================================#
 #============================= Lista de comandos ==========================#
 
@@ -212,9 +212,9 @@ while :; do
 
 
 *"atualizar"*|*"atualizacao"*|*"atualizacoes"*)
-    y="$(( $RANDOM % 4))"
-    echo -e  "Nany: \c" && echo -e "${msg_atualizar[$y]}" | pv -qL 25 && sudo pacman -Sy >> /dev/null && echo -e "Nany: \c" && echo -e "\033[37mVoçe tem\033[31m (`pacman -Qu | wc -l`)\033[m\033[37m, pacotes para atualizar!\033[m" | pv -qL 25 && pacman -Qu	;;
-    
+	y="$(( $RANDOM % 4))"
+    echo -e  "Nany: \c" && echo -e "${msg_atualizar[$y]}" | pv -qL 25
+    	atualizacoes_repo	;;
 
 *"em cache?"*|*"o cache?"*)
 	cache="$(( $RANDOM % 5))"
@@ -222,7 +222,8 @@ while :; do
 
 *"atualize"*)
         a="(( $RANDOM % 7))"
-        echo -e "Nany: \c" && echo -e "${msg_tenho_atualizacoes[$a]}" | pv -qL 25 & sleep 3 && sudo pacman -Su >> /dev/null && echo -e "Nany: \c" && echo -e "\033[37mTudo pronto ${USER}!!!\033[m" | pv -qL 25      ;;
+        echo -e "Nany: \c" && echo -e "${msg_tenho_atualizacoes[$a]}"
+	atualizacoes_sistema	;;
 
 *"limpe a tela"*|*"limpar tela"*)
 	clear	;;

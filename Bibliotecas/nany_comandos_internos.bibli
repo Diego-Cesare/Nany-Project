@@ -1,6 +1,36 @@
 #!/bin/bash
 
 #============================== Menssagens para comandos internos ====================================#
+atualizacoes_repo(){ 
+while :; do
+    for i in A G U A R D E - A - V E R I F I C A Ç Ã O - D O S - R E P O S I T O R I O S; do
+        echo -ne "\033[1;31m\b $i\033[m"; sleep 0.1
+    done
+     sleep 0.3
+	echo -e "\n"
+	sudo pacman -Sy >> /dev/null
+
+echo -e "\nNany: \033[37mVoçe tem\033[31m (`pacman -Qu | wc -l`)\033[m\033[37m, pacotes para atualizar!\033[m" | pv -qL 25 && echo -e "\033[1;31m`pacman -Qu`\033[m"
+ break
+    done
+}
+
+atualizacoes_sistema(){ 
+while :; do
+
+    for i in A G U A R D E - A - A T U A L I Z A Ç Ã O - D O  - S I S T E M A ; do
+        echo -ne "\033[1;31m\b $i\033[m"; sleep 0.1
+    done
+     sleep 0.3
+echo -e "\n"
+	sudo pacman -Su >> /dev/null 
+echo -e "\nNany: \033[37mSeu sistema esta atualizado!!!\033[m"
+ break
+    done
+}
+
+
+
 
 info_pacote(){
 clear
@@ -33,7 +63,16 @@ echo -e "Nany: \033[37mDigite o nome do pacote que deseja deletar\033[m" | pv -q
 read -r -e pkg
 
 [[ -n $pkg ]] && echo -e "Nany: \033[37m Digite sua senha e aguarde um momento enquanto eu deleto o pacote\033[m ( $pkg )" | pv -qL 80 
-	sudo pacman -R "$pkg" >> /dev/null &&  echo -e "Nany: \033[37mProntinho! o pacote \033[36m( $pkg ) \033[37mfoi deletado :)\033[m" | pv -qL 80 
+
+while :; do
+sudo pacman -R "$pkg" >> /dev/null 
+    for i in A G U A R D E - A - R E M O Ç Ã O - D O - P R O G R A M A; do
+        echo -ne "\033[1;31m\b $i\033[m"; sleep 0.1
+    done
+	 sleep 0.3
+echo -e "\nNany: \033[37mProntinho! o pacote \033[36m( $pkg ) \033[37mfoi deletado :)\033[m" | pv -qL 80
+ break
+	done
 
 }
 
@@ -51,6 +90,14 @@ echo -e "Nany: \033[37mAlias ${USER} digite o nome correto, eu trabalho com logi
 
 	read -r -e pkg
 
-[[ -n $pkg ]] && echo -e "Nany: \033[37m Digite sua senha e aguarde um momento enquanto eu instalo o pacote\033[m ( $pkg )" | pv -qL 80 
-    sudo pacman -S "$pkg" >> /dev/null &&  echo -e "Nany: \033[37mProntinho! o pacote \033[0m$pkg \033[37mfoi instalado :)\033[m" | pv -qL 80 
+[[ -n $pkg ]] && echo -e "Nany: \033[37m Digite sua senha e aguarde um momento enquanto eu instalo o pacote\033[m ( $pkg )" | pv -qL 80
+while :; do
+sudo pacman -S "$pkg" >> /dev/null 
+    for i in A G U A R D E - A - I N S T A L Ç Ã O - D O - P R O G R A M A; do
+        echo -ne "\033[1;31m\b $i\033[m"; sleep 0.1
+    done
+	 sleep 0.3
+echo -e "\nNany: \033[37mProntinho! o pacote \033[0m$pkg \033[37mfoi instalado :)\033[m" | pv -qL 80
+break
+	done
 }

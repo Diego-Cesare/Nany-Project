@@ -31,13 +31,14 @@ msg_papeis_parede=(
 )
 
 msg_apt=(
-"\033[1;37mVoçe pode obter informaçoes aqui \033[1;32mhttps://wiki.debian.org/pt_BR/Apt \033[1;37mque é a Wiki oficial do apt\033[m
+"\033[;37mVoçe pode obter informaçoes aqui \033[1;32mhttps://wiki.debian.org/pt_BR/Apt \033[1;37mque é a Wiki oficial do apt\033[m
 
-\033[1;37mEste video pode te ajudar \033[1;32mhttps://www.youtube.com/watch?v=CXKiaarncGQ\033[m
+\033[;37mEste video pode te ajudar \033[1;32mhttps://www.youtube.com/watch?v=CXKiaarncGQ\033[m
 
+\033[37mVoçe ira encontrar muita ajuda neste site https://debxp.org/doku.php?fbclid=IwAR1l4KENyXFC9aY-ihIs4wBE1Ahlipf2GhixBhAWMBb8MubuxQNOPWK-3KA
 "
 )
 
 msg_pacman=(
-"\033[1;37mPara um conteudo mais completo consulte a Arch wiki em:\033[1;32m https://wiki.archlinux.org/index.php/Pacman\033[m"
+"\033[;37mPara um conteudo mais completo consulte a Arch wiki em:\033[1;32m https://wiki.archlinux.org/index.php/Pacman\033[m"
 )

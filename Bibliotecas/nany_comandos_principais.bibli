@@ -37,12 +37,12 @@ msg_que_bom=(
 )
 
 msg_tenho_atualizacoes=(
-"\033[37m Espera um pouco, irei verificar o banco de dados\033[m"
-"\033[37m Estou agora mesmo verificando por atualizações\033[m"
-"\033[37mOk,espera só um instante\033[m"
-"\033[37mVamos ver!\033[m"
-"\033[37mVou ver kkkkk, seu desejo é uma ordem kkkkk\033[m"
-"\033[37mVou agora mesmo verificar \033[m"
+"\033[37mPor favor aguarde\033[m"
+"\033[37mUm instante por favor\033[m"
+"\033[37mCarregando banco de dados\033[m"
+"\033[37mEfetuando procedimentos\033[m"
+"\033[37mBaixando e instalando atualizações\033[m"
+"\033[37mQuase tudo pronto. Um momento por favor\033[m"
 )
 
 msg_quantos_pacotes=(
